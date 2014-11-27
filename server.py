@@ -16,6 +16,10 @@ class EchoHandler(SocketServer.DatagramRequestHandler):
     """
 
     def handle(self):
+        """
+        Servidor de recepción que contesta a peticiones INVITE del cliente
+        descargando un archivo mp3, y a peticiones BYE
+        """
         while 1:
             # Leyendo línea a línea lo que nos envía el cliente
             line = self.rfile.read()
